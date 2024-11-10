@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.eggs
+*.pyo
+
+# Virtual environments
+venv/
+.env/
+
+# FastAPI and uvicorn logs
+*.log
+.cache/
+output/
+bboxes
+images
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+images_orig/
+# VS Code settings
+.vscode/
+
+efficient_net_fine_tune1.onnx
+efficient_net_fine_tune1.onnx.data
+
+# PyCharm project files
+../.idea/
+
+.python-version

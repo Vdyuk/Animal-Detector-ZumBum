@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-multipart
+pydantic
+pandas
+PytorchWildlife==1.1.0
+numpy
+torch
+torchvision
+opencv-contrib-python
+pillow
+openpyxl
+timm
+aiofiles
+onnxruntime

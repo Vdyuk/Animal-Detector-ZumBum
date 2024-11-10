@@ -1,0 +1,823 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.mat-mdc-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table th {
+  background-color: #f5f5f5;
+}
+
+.mat-elevation-z8 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mat-elevation-z8 th,
+.mat-elevation-z8 td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  color: black;
+}
+
+.mat-elevation-z8 th {
+  background-color: #f5f5f5;
+}
+
+.mat-elevation-z8 {
+  background-color: white;
+  color: black;
+}
+
+.mat-elevation-z8 {
+  width: 100%;
+  border-collapse: collapse;
+  color: #333;
+  /* Dark text color */
+}
+
+.mat-elevation-z8 th,
+.mat-elevation-z8 td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mat-elevation-z8 th {
+  background-color: #f5f5f5;
+}
+
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.mat-mdc-table {
+  width: 100%;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.table {
+  max-height: 500px;
+  /* Установите желаемую максимальную высоту */
+  overflow-y: auto;
+  /* Добавляет вертикальную прокрутку, если содержимое превышает максимальную высоту */
+}
+
+.wrapper {
+  max-height: 650px;
+  /* Высота контейнера должна быть больше, чем максимальная высота таблицы */
+  overflow: auto;
+  /* Скрыть часть таблицы, если она превышает высоту контейнера */
+  position: relative;
+  /* Позиционирование для прокрутки */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  // box-shadow: 10px 40px 50px 0 rgba(80, 80, 80, 0.4);
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.card h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #0085ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0066cc;
+}
+
+.card {
+  display: flex;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 40px 50px 0 rgba(80, 80, 80, 0.1);
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.card h2 {
+  color: #333;
+  font-size: 32px;
+  /* Увеличила размер шрифта заголовка */
+  margin-bottom: 0;
+  /* Убрала отступ снизу у заголовка */
+  flex: 1;
+  /* Занимает половину ширины карточки */
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  flex: 1;
+  /* Занимает половину ширины карточки */
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  /* Увеличила размер шрифта кнопки */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #0085ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex: 1;
+  /* Занимает половину ширины карточки */
+  margin-top: 60px;
+}
+
+.btn:hover {
+  background-color: #0066cc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #4285f4;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 16px;
+  width: 150px;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.container {
+  color: black;
+}
+
+.table-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  // box-shadow: 10px 40px 50px 0 rgba(80, 80, 80, 0.4);
+  margin-top: 50px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table th {
+  background-color: #f5f5f5;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hint {
+  position: absolute;
+  left: 5px;
+  right: auto;
+  bottom: 0px;
+  font-size: 14px;
+  line-height: 14px;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+  color: grey;
+}
+
+h2 {
+  margin-bottom: 10px !important;
+}
+
+h4 {
+  margin: 0;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+.lbl {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.btn {
+  color: white !important;
+  background-color: #140AF0 !important;
+}
+
+.disabled {
+  opacity: 0.5;
+  background-color: #5f5f5f !important;
+}
+
+/* Container Styling */
+.container-bear {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  /* Установка ширины на 100% */
+  height: 100%;
+  /* Установка высоты на 100% */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  filter: brightness(0.7);
+  object-fit: cover;
+  /* Обрезка и масштабирование для сохранения пропорций */
+}
+
+/* Overlay Styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent overlay */
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Upload Card Styling */
+.upload-card {
+  position: relative;
+  z-index: 3;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: left;
+}
+
+.upload-card h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.filters {
+  margin-bottom: 15px;
+}
+
+.size-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.upload-btn {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+  color: white;
+}
+
+/* Animated Text at Bottom Left */
+.animated-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 4;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: fadeText 5s ease-in-out infinite;
+}
+
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  height: 100vh;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #0275ff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  z-index: 100001;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container-bear {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* Изменение с center на flex-end */
+  overflow: hidden;
+  text-align: center;
+}
+
+.upload-card {
+  position: relative;
+  z-index: 3;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: left;
+  height: auto;
+  /* Даем возможность карточке подстраиваться по высоте */
+}
+
+.container-bear {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Изменяем на center для центрирования содержимого */
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Оставляем стиль spinner-container без изменений */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  /* Убедитесь, что z-index достаточно высокий */
+  height: 100vh;
+}
+
+.section {
+  margin-top: 60px;
+  max-width: 1300px;
+}
+
+.table-light {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  /* светлый фон */
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  /* закругленные углы */
+}
+
+.table-header {
+  background-color: #fafafa;
+  /* цвет заголовка */
+  font-weight: bold;
+  color: #333;
+  /* Цвет текста заголовка */
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.table-cell {
+  padding: 15px;
+  /* Отступы внутри ячеек */
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  /* Линия между строками */
+  color: black;
+}
+
+.table-cell:nth-child(even) {
+  background-color: #f9f9f9;
+  /* Цвет фона для четных строк */
+}
+
+table {
+  margin: 20px 0;
+  /* Отступ сверху и снизу */
+}
+
+h2 {
+  color: #333;
+  /* Цвет текста заголовка отчета */
+}
+
+.thumbnail-image {
+  width: 100px;
+  /* Размер миниатюры */
+  height: auto;
+  /* Автоматическая высота для сохранения пропорций */
+  cursor: pointer;
+  /* Указатель, чтобы показать, что изображение кликабельно */
+}
+
+.thumbnail-image:hover {
+  opacity: 0.8;
+  /* Эффект затемнения при наведении */
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  /* Направляем поверх всех других элементов */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Полная ширина */
+  height: 100%;
+  /* Полная высота */
+  overflow: auto;
+  /* Возможность прокрутки если нужно */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* полупрозрачный фон */
+}
+
+.modal-content {
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Ширина модального окна */
+  max-width: 600px;
+  /* Максимальная ширина */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.full-image {
+  width: 100%;
+  /* Полная ширина изображения */
+  height: auto;
+  /* Автоматическая высота */
+}
+
+
+h2 {
+  color: black;
+}
+
+.section-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Центрирование содержимого по горизонтали */
+  margin-top: 60px;
+  /* Создание отступа сверху */
+}
+
+.table-container {
+  max-width: 1300px;
+  /* Максимальная ширина таблицы */
+  width: 100%;
+  /* Занимает 100% ширины родителя */
+  padding: 0 60px;
+  /* Отступы по сторонам 60px */
+  margin-top: 0;
+  box-sizing: border-box;
+  /* Чтобы отступы не увеличивали ширину контейнера */
+}
+
+.table-light {
+  width: 100%;
+  /* Занимает 100% ширины контейнера */
+  border-collapse: collapse;
+  /* Убираем отступы между ячейками */
+}
+
+.table-background {
+  position: relative;
+  /* относительное позиционирование для вложенных элементов */
+  width: 100%;
+  /* Занимает 100% ширины родителя */
+  height: 100vh;
+  /* Занимает всю высоту окна браузера */
+}
+
+.table-container {
+  position: relative;
+  /* Чтобы сделать таблицу над наложением */
+  z-index: 100;
+  /* Обеспечивает видимость таблицы над темным наложением */
+  max-width: 1300px;
+  /* Максимальная ширина таблицы */
+  width: 100%;
+  /* Занимает 100% ширины родителя */
+  max-height: 600px;
+  overflow: auto;
+}
+
+.report {
+  z-index: 100;
+}
+
+.con-table {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: white;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+
+
+/* Стили для контейнера файла */
+.custom-file-upload {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: inline-block;
+}
+
+.file-input {
+  font-size: 20px;
+  /* Размер текста внутри инпута */
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  /* Скрываем стандартный input */
+  cursor: pointer;
+  /* Указатель */
+}
+
+.upload-label {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  // background-color: #008cff;
+  /* Цвет кнопки */
+  // color: white;
+  /* Цвет текста кнопки */
+  font-size: 16px;
+  /* Размер текста */
+  transition: background-color 0.3s;
+  /* Эффект перехода */
+  cursor: pointer;
+  /* Указатель */
+}
+
+// .upload-label:hover {
+//   background-color: #006bb3;
+//   /* Цвет кнопки при наведении */
+// }
+
+// /* Дополнительные стили для улучшения визуального восприятия */
+// .upload-label:active {
+//   background-color: #005999;
+//   /* Цвет кнопки при нажатии */
+// }
+
+
+.upload-label {
+  margin-bottom: 5px;
+}
+
+.upload-label {
+  background-image: url(../../../assets/img/forest-2.jpg);
+  color: white;
+  text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,  
+  1px 1px 0 #000; 
+}
+
+.upload-label:hover {
+  background-image: url(../../../assets/img/forest-2.jpg);
+  text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,  
+  1px 1px 0 #000; 
+}
+
+.upload-btn {
+  background-image: url(../../../assets/img/forecast.jpg);
+  color: white;
+  margin-top: 10px;
+  text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,  
+  1px 1px 0 #000; 
+}
+
+.upload-btn:hover {
+  background-image: url(../../../assets/img/forecast.jpg);
+  text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,  
+  1px 1px 0 #000; 
+}
+
+h2 {
+  color: #000!important;
+}
+
+.tb {
+  display: flex;
+}
+
+.table-light {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.table-header {
+  background-color: #f1f1f1;  /* Светло-серый цвет для заголовков */
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;  /* Линия под заголовками */
+}
+
+.table-cell {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;  /* Линия между строками */
+}
+
+.table-light tr:hover {
+  background-color: #f5f5f5;  /* Фоновый цвет при наведении */
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  margin: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,46 @@
+<ng-container>
+  <header [ngClass]="{'light': !enabled, 'dark': enabled}" class="header">
+    <div class="header-section">
+      <div class="header-item">
+        <a href="" class="logo" [ngClass]="enabled ? 'link-light' : 'link-dark'">ZumBumDetector</a>
+      </div>
+      <div class="container">
+        <div class="btns-contnainer">
+          <div class="button-container">
+            <!-- <button (click)="changeTheme()" class="btn theme-toggle"
+              [ngClass]="enabled ? 'btn-light-theme' : 'btn-dark-theme'" (mouseenter)="showTooltip('Сменить тему', 2)"
+              (mouseleave)="hideTooltip()">
+              <img [src]="enabled ? './assets/img/light.svg' : './assets/img/dark.svg'" alt="Switch Theme"
+                class="theme-icon" />
+            </button>
+            <p class="tooltip" *ngIf="tooltipVisible[2]">{{ tooltipText[2] }}</p> -->
+
+            <div class="cont-count">
+              <button   mat-button class="btn-f btn-blue blue" [disabled]="!isPhotosLoaded || loadingReport" (click)="exportReport()">
+               <div   *ngIf="!loadingReport">Выгрузить отчет</div> 
+                <mat-progress-spinner
+                  *ngIf="loadingReport"
+                  diameter="20"
+                  mode="indeterminate"
+                  class="loading-spinner">
+                </mat-progress-spinner>
+              </button>
+              
+              <button   mat-button class="btn-f btn-blue blue" [disabled]="!isPhotosLoaded || loadingPhotos" (click)="exportPhotos()">
+                <div  *ngIf="!loadingPhotos">Выгрузить обработанные фото</div>
+                <mat-progress-spinner
+                  *ngIf="loadingPhotos"
+                  diameter="20"
+                  mode="indeterminate"
+                  class="loading-spinner">
+                </mat-progress-spinner>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <router-outlet></router-outlet>
+</ng-container>

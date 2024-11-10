@@ -1,0 +1,159 @@
+<div class="container-bear" *ngIf="!photosList">
+    <img src="../../../assets/img/bar.jpeg" alt="Фоновое изображение" class="background-image">
+
+    <!-- Overlay with Loading Spinner -->
+    <div class="overlay">
+        <!-- <div class="loading-spinner"></div> -->
+    </div>
+
+    <!-- Upload Card -->
+    <div *ngIf="!isLoading" class="upload-card">
+        <h2>Загрузите фото и выберите параметры</h2>
+
+        <mat-checkbox class="example-margin" [(ngModel)]="upscale">Повышать разрешение фото после обрезки</mat-checkbox>
+
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Минимальная ширина (пиксели)</mat-label>
+            <input matInput type="number" [(ngModel)]="min_width" min="0" (input)="validateDimensions()">
+        </mat-form-field>
+
+        <!-- Используем Angular Material FormField для высоты -->
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Минимальная высота (пиксели)</mat-label>
+            <input matInput type="number" [(ngModel)]="min_height" min="0" (input)="validateDimensions()">
+        </mat-form-field>
+
+
+        <div class="custom-file-upload">
+            <input type="file" id="fileInput" class="file-input" (change)="onFilechange($event)" multiple />
+            <label for="fileInput" class="upload-label">Выберите файлы для загрузки</label>
+        </div>
+
+        <div class="custom-folder-upload" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)"
+            (drop)="onDrop($event)">
+            <input type="file" id="folderInput" (change)="onFolderChange($event)" webkitdirectory multiple
+                class="file-input" />
+            <label for="folderInput" class="upload-label">Выберите папку для загрузки</label>
+        </div>
+
+        <div *ngIf="isFileExist" class="file-count">
+            Загружено файлов: {{ allFiles ? allFiles.length : 0 }}
+        </div>
+
+
+
+        <button [ngClass]="{ 'disabled': !isFileExist }" [disabled]="!isFileExist" (click)="navigateToAnalysis()"
+            class="upload-btn lbl">Отправить на анализ</button>
+    </div>
+
+
+
+    <div *ngIf="isLoading" class="spinner-container">
+        <span class="loader"></span>
+    </div>
+    <!-- Animated Text in Bottom Left -->
+    <div class="animated-text">
+        <span id="text-change">Зумеры и Бумеры </span>
+    </div>
+</div>
+
+<section class="section-table" *ngIf="photosList">
+    <div class="table-background"> <!-- Контейнер для фона -->
+        <img src="../../../assets/img/bar.jpeg" alt="Фоновое изображение" class="background-image">
+        <div class="overlay"></div> <!-- Наложение, добавленное к фону -->
+        <div class="con-table">
+
+
+
+            <div class="table-container">
+                <h1>
+                    Результаты работы модели
+                </h1>
+                <div class="tb">
+                    <div class="report">
+                        <h2>
+                            Сводный отчет
+                        </h2>
+                        <table *ngIf="photos" class="mat-elevation-z8 table-light">
+                            <!-- <thead>
+                                <tr>
+                                    <th class="table-header">Параметры</th>
+                                    <th class="table-header">Значения</th>
+                                </tr>
+                            </thead> -->
+                            <tbody>
+                                <tr>
+                                    <td class="table-cell">Загружено фото</td>
+                                    <td class="table-cell">{{ photosList.all_count }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cell">Найдено фото с животными</td>
+                                    <td class="table-cell">{{ photosList.count_of_images_with_animals }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cell">Всего животных на фото</td>
+                                    <td class="table-cell">{{ photosList.count_of_animals_on_images }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cell">Качественных фото животных</td>
+                                    <td class="table-cell">{{ photosList.count_of_success }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="report">
+
+                        <div class="table-container">
+                            <h2>
+                                Примеры обработки фото
+                            </h2>
+                            <table *ngIf="photos" mat-table [dataSource]="photos" class="mat-elevation-z8 table-light">
+                                <ng-container matColumnDef="path">
+                                    <th mat-header-cell *matHeaderCellDef class="table-header"> Название файла </th>
+                                    <td mat-cell *matCellDef="let photo" class="table-cell"> {{ photo.path }} </td>
+                                </ng-container>
+        
+                                <ng-container matColumnDef="relativePath">
+                                    <th mat-header-cell *matHeaderCellDef class="table-header"> Фото до обработки</th>
+                                    <td mat-cell *matCellDef="let photo" class="table-cell">
+                                        <img [src]="'http://80.87.104.235:8000/' + photo.relativePath" alt="Thumbnail"
+                                            class="thumbnail-image"
+                                            (click)="openImage('http://80.87.104.235:8000/' + photo.relativePath)" />
+                                    </td>
+                                </ng-container>
+        
+                                <ng-container matColumnDef="modifiedPath">
+                                    <th mat-header-cell *matHeaderCellDef class="table-header"> Фото после обработки</th>
+                                    <td mat-cell *matCellDef="let photo" class="table-cell">
+                                        <img [src]="'http://80.87.104.235:8000/' + photo.modifiedPath" alt="Thumbnail"
+                                            class="thumbnail-image"
+                                            (click)="openImage('http://80.87.104.235:8000/' + photo.modifiedPath)" />
+                                    </td>
+                                </ng-container>
+        
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div *ngIf="showModal" class="modal" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <img [src]="currentImageUrl" alt="Изображение" class="full-image" />
+    </div>
+</div>
